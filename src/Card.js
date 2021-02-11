@@ -7,8 +7,12 @@ const Card = (props) => {
 
     return (
         <img className="Card"
-              src= {`https://deckofcardsapi.com/static/img${props.cardId}.png`}>
-        </img>
-    )
+              src= {`https://deckofcardsapi.com/static/img${props.cardId}.png`}
+              alt={`${props.cardId}`} />
+              
+        
+    );
 
 }
+
+export default Card;

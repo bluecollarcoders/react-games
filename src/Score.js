@@ -18,3 +18,16 @@ const getTotalScore = (cards) => {
     }
     return total;
 }
+
+// Display score
+const Score = (props) => {
+    const score = getTotalScore(props.cards);
+    return (
+        <div>
+            <h2>Score: {score}</h2>
+            {score === 21 ? <h4>🙌🙌🙌 BlackJack!!! 🙌🙌🙌</h4>: null}
+        </div>
+    );
+}
+
+export default Score;

@@ -1,4 +1,4 @@
-import React from ".react";
+import React from "react";
 
 // Calculate the score for a single card.
 

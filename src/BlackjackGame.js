@@ -1,17 +1,18 @@
 import React from 'react';
-import Cardlist from './Cardlist';
+import CardList from './CardList';
 import Score from "./Score";
 import "./BlackjackGame.css";
 
 
+
 // Get a random element from an array
-function choice(props) {
+function choice(values) {
     const randIdx = Math.floor(Math.random() * values.length);
     return values[randIdx];
 }
 
 // Get a random value, suit combination from card data
-function getCare(values,suits) {
+function getCard(values,suits) {
     const randomVal = choice(values);
     const randomSuit = choice(suits);
     return randomVal + randomSuit;
@@ -32,7 +33,7 @@ function BlackjackGame(props) {
     const pairOfCards = getCards(props.values, props.suits, 2);
     return (
         <div className="BlackjackGame">
-          <Cardlist cards={pairOfCards} />
+          <CardList cards={pairOfCards} />
           <Score cards={pairOfCards} />
         </div>
     );
